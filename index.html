@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="font-family:'Gotham'; position:absolute; left:-1000px; visibility:hidden">.</div>
+    <div class="bg-game"></div>
+
+    <!--home-->
+    <div id="section-home" class="section text-center">
+        <div class="bg-home"></div>
+
+        <img class="btn-close" src="img/btn-close.png">
+
+        <div class="masthead">
+            <h1>GAME TITLE</h1>
+        </div>
+        <div class="your-score">
+            YOUR SCORE
+            <br>
+            <div class="container-score">
+                <span id="your-score">0</span>
+            </div>
+        </div>
+        <br>
+
+        <div class="coin">
+            <b>You have
+            <div class="container-coin">
+                <span id="chances">0</span>
+            </div>
+            chances left</b>
+        </div>
+
+        <br>
+        <div>
+            <img id="play" class="btn-play" src="img/btn-play.png">
+        </div>
+
+    </div>
+
+    <!--prize-->
+    <div id="section-prize" class="section text-center display-none">
+        <div class="prize-frame">
+            <img id="frame-prize" src="img/frame.png">
+            <div class="link-mae back"><img src="img/btn-close.png"></div>
+            <div class="prize-btn">
+                <div class="prize0 display-none">
+                    <img class="btn-play" src="img/btn-play.png">
+                </div>
+            </div>
+        </div>
+        
+        <div class="prize-content">
+            <div class="prize-score">
+                YOUR SCORE
+                <br>
+                <div class="container-score">
+                    <span id="prize-score">0</span>
+                </div>
+            </div>
+
+            <br><br>
+            <div id="prize-desc" class="content"></div>
+            <div>
+                <img id="prize" class="prize" src="">
+            </div>
+
+        </div>
+    </div>
+
+    <!--overlay-->
+    <div class="loading overlay display-none"></div>
+    <div class="loading loader display-none"></div>
+    <div class="msg overlay display-none"></div>
+    <div id="msg" class="msg msg-modal display-none"></div>
+
+</body>
+<script type="text/javascript" src="phaser.min.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="game.js?v=2"></script>
+</html>
