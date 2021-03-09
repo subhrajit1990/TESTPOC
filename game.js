@@ -279,7 +279,7 @@ var game = new Phaser.Game(config)
 // phaser game
 
 if (debug) console.log(uuid)
-serverCall('POST', 'test.php', jsonData(), {}, function(res) {
+serverCall('POST', 'test.php', jsonData(), {'Access-Control-Allow-Origin':*}, function(res) {
 	chances = 3
 	totalAcc = 101
 
@@ -301,7 +301,6 @@ function serverCall(method, endpoint, data, headers, cb) {
 	    url: api + endpoint,
 	    cache: false,
 	    data: data,
-		Access-Control-Allow-Origin:*,
 	    headers: headers,
 	    success: function (resp) {
 	        if (debug) console.log((new Date()).getTime()-t,resp)
