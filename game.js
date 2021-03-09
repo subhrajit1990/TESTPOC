@@ -302,7 +302,7 @@ function serverCall(method, endpoint, data, headers, cb) {
 	    cache: false,
 	    data: data,
 	    headers: headers,
-		crossDomain: true,
+		
 	    success: function (resp) {
 	        if (debug) console.log((new Date()).getTime()-t,resp)
 	        $('.loading').addClass('display-none')
