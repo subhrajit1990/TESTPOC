@@ -279,7 +279,7 @@ var game = new Phaser.Game(config)
 // phaser game
 
 if (debug) console.log(uuid)
-serverCall('POST', 'test.php', jsonData(), {'Access-Control-Allow-Origin':'*'}, function(res) {
+serverCall('POST', 'test.php', jsonData(), {'Access-Control-Allow-Origin':'https://test-my-poc.herokuapp.com/'}, function(res) {
 	chances = 3
 	totalAcc = 101
 
