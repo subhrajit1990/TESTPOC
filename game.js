@@ -279,7 +279,7 @@ var game = new Phaser.Game(config)
 // phaser game
 
 if (debug) console.log(uuid)
-serverCall('POST', 'test.php', jsonData(), {'Access-Control-Allow-Origin':'https://test-my-poc.herokuapp.com/','Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'}, function(res) {
+serverCall('POST', 'test.php', jsonData(), {}, function(res) {
 	chances = 3
 	totalAcc = 101
 
@@ -302,6 +302,7 @@ function serverCall(method, endpoint, data, headers, cb) {
 	    cache: false,
 	    data: data,
 	    headers: headers,
+		crossDomain: true,
 	    success: function (resp) {
 	        if (debug) console.log((new Date()).getTime()-t,resp)
 	        $('.loading').addClass('display-none')
