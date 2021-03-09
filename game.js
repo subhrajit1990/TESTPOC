@@ -296,7 +296,12 @@ function serverCall(method, endpoint, data, headers, cb) {
 	$('.loading').removeClass('display-none')
 
 	if (debug) console.log('request payload', data);
-	$.ajax({
+	
+	 $('.loading').addClass('display-none')
+	 $('.msg').addClass('display-none')
+	 cb({});
+	
+	/*$.ajax({
 	    type: method,
 	    url: api + endpoint,
 	    cache: false,
@@ -319,7 +324,7 @@ function serverCall(method, endpoint, data, headers, cb) {
 	        console.log("ajax error", xhr.status);
 	        showPopup(msg[0], true)
 	    }
-	});
+	});*/
 }
 var msg = new Array()
 msg[0] = 'error'
