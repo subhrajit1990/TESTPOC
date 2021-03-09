@@ -301,6 +301,7 @@ function serverCall(method, endpoint, data, headers, cb) {
 	    url: api + endpoint,
 	    cache: false,
 	    data: data,
+		Access-Control-Allow-Origin:*,
 	    headers: headers,
 	    success: function (resp) {
 	        if (debug) console.log((new Date()).getTime()-t,resp)
